@@ -76,7 +76,7 @@ for col in columns_to_format:
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
 st.dataframe(
     filtered_df,
-    width=1000,  # Use full page width
+    width=1500,  # Use full page width
     height=600  # You can adjust this number to control table height
 )
 
