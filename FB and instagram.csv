@@ -1,0 +1,165 @@
+﻿Platform,Space,Data Point,MCL UI,MCL API,Brandwatch
+Facebook,Public Profiles,Username,Y,N,Y
+Facebook,Public Profiles,User ID,Y,N,Y
+Facebook,Public Profiles,Creation Time,N,N,Y
+Facebook,Public Profiles,If Branded Content,N,N,N
+Facebook,Public Profiles,Post's text,Y,N,Y
+Facebook,Public Profiles,Post's image,Y,N,Y
+Facebook,Public Profiles,Post's video,Y,N,Y
+Facebook,Public Profiles,Post's audio,N,N,N
+Facebook,Public Profiles,# of Views,N,N,N
+Facebook,Public Profiles,# of Reactions,Y,N,Y
+Facebook,Public Profiles,# of Shares,Y,N,Y
+Facebook,Public Profiles,# of Comments,Y,N,Y
+Facebook,Public Profiles,# of Followers,N,N,Y
+Facebook,Public Profiles,# of Members,N/A,N/A,N
+Facebook,Public Profiles,URL of post,Y,N,Y
+Facebook,Public Profiles,Link in post,Y,N,Y
+Facebook,Public Profiles,Domain in post,Y,N,Y
+Facebook,Public Profiles,Comments,Y,N,Y
+Facebook,Public Profiles,Historical Data,Y,N,Y
+Facebook,Public Profiles,Real-time Data,Y,N,Y
+Facebook,Public Profiles,Language,Y,N,Y
+Facebook,Public Profiles,Geolocation (user),N,N,N
+Facebook,Public Groups,Username,Y,Y,Y
+Facebook,Public Groups,User ID,Y,Y,Y
+Facebook,Public Groups,Creation Time,N,N,Y
+Facebook,Public Groups,If Branded Content,N,N,N
+Facebook,Public Groups,Post's text,Y,Y,Y
+Facebook,Public Groups,Post's image,Y,Y,Y
+Facebook,Public Groups,Post's video,Y,Y,Y
+Facebook,Public Groups,Post's audio,N,N,N
+Facebook,Public Groups,# of Views,N,N,N
+Facebook,Public Groups,# of Reactions,Y,Y,Y
+Facebook,Public Groups,# of Shares,Y,Y,Y
+Facebook,Public Groups,# of Comments,Y,Y,Y
+Facebook,Public Groups,# of Followers,N/A,N/A,Y
+Facebook,Public Groups,# of Members,Y,Y,N
+Facebook,Public Groups,URL of post,Y,Y,Y
+Facebook,Public Groups,Link in post,Y,Y,Y
+Facebook,Public Groups,Domain in post,Y,Y,Y
+Facebook,Public Groups,Comments,Y,Y,Y
+Facebook,Public Groups,Historical Data,Y,Y,Y
+Facebook,Public Groups,Real-time Data,Y,Y,Y
+Facebook,Public Groups,Language,Y,Y,Y
+Facebook,Public Groups,Geolocation (user),N,N,N
+Instagram,Business/Creator Account,Username,Y,Y,Y
+Instagram,Business/Creator Account,User ID,Y,Y,Y
+Instagram,Business/Creator Account,Creation Time,N,N,Y
+Instagram,Business/Creator Account,If Branded Content,Y,Y,N
+Instagram,Business/Creator Account,Post's text,Y,Y,Y
+Instagram,Business/Creator Account,Post's image,Y,Y,Y
+Instagram,Business/Creator Account,Post's video,Y,Y,Y
+Instagram,Business/Creator Account,Post's audio,N,N,N
+Instagram,Business/Creator Account,# of Views,Y,Y,N
+Instagram,Business/Creator Account,# of Reactions,Y,Y,Y
+Instagram,Business/Creator Account,# of Shares,N,N,Y
+Instagram,Business/Creator Account,# of Comments,Y,Y,Y
+Instagram,Business/Creator Account,# of Followers,Y,Y,Y
+Instagram,Business/Creator Account,# of Members,N/A,N/A,N
+Instagram,Business/Creator Account,URL of post,Y,Y,Y
+Instagram,Business/Creator Account,Link in post,Y,Y,Y
+Instagram,Business/Creator Account,Domain in post,Y,Y,Y
+Instagram,Business/Creator Account,Comments,Y,Y,Y
+Instagram,Business/Creator Account,Historical Data,Y,Y,Y
+Instagram,Business/Creator Account,Real-time Data,Y,Y,Y
+Instagram,Business/Creator Account,Language,Y,Y,Y
+Instagram,Business/Creator Account,Geolocation (user),N,N,N
+Instagram,Public Accounts,Username,Y,Y,Y
+Instagram,Public Accounts,User ID,Y,Y,Y
+Instagram,Public Accounts,Creation Time,N,N,Y
+Instagram,Public Accounts,If Branded Content,Y,Y,N
+Instagram,Public Accounts,Post's text,Y,Y,Y
+Instagram,Public Accounts,Post's image,Y,Y,Y
+Instagram,Public Accounts,Post's video,Y,Y,Y
+Instagram,Public Accounts,Post's audio,N,N,N
+Instagram,Public Accounts,# of Views,Y,Y,N
+Instagram,Public Accounts,# of Reactions,Y,Y,Y
+Instagram,Public Accounts,# of Shares,N,N,Y
+Instagram,Public Accounts,# of Comments,Y,Y,Y
+Instagram,Public Accounts,# of Followers,Y,Y,Y
+Instagram,Public Accounts,# of Members,N/A,N/A,N
+Instagram,Public Accounts,URL of post,Y,Y,Y
+Instagram,Public Accounts,Link in post,Y,Y,Y
+Instagram,Public Accounts,Domain in post,Y,Y,Y
+Instagram,Public Accounts,Comments,Y,Y,Y
+Instagram,Public Accounts,Historical Data,Y,Y,Y
+Instagram,Public Accounts,Real-time Data,Y,Y,Y
+Instagram,Public Accounts,Language,Y,Y,Y
+Instagram,Public Accounts,Geolocation (user),N,N,N
+Facebook,Public Profiles,Post ID,Y,Y,Y
+Facebook,Public Profiles,Page/Profile/Group ID,Y,Y,Y
+Facebook,Public Profiles,Permalink/Canonical URL,Available via UI and API when post is public.,Available via UI and API when post is public.,Y
+Facebook,Public Profiles,Media Type,Available when post includes media.,Available when post includes media.,Y
+Facebook,Public Profiles,Post Type,"Visible when post is categorized (e.g., shared link, status).","Visible when post is categorized (e.g., shared link, status).",Y
+Facebook,Public Profiles,Branded Content Sponsor,Available only if post is branded content.,Available only if post is branded content.,N
+Facebook,Public Profiles,Timestamp (Exact),Included in API and visible in UI.,Included in API and visible in UI.,Y
+Facebook,Public Profiles,Edit History / Last Updated Time,May be visible in UI; limited API access.,May be visible in UI; limited API access.,N
+Facebook,Public Profiles,Engagement Breakdown,Available only via API for reactions breakdown.,Available only via API for reactions breakdown.,Y
+Facebook,Public Profiles,Platform Source,"Shown for some posts (e.g., mobile/web).","Shown for some posts (e.g., mobile/web).",Y
+Facebook,Public Profiles,Video Duration,Only available for video posts.,Only available for video posts.,Y
+Facebook,Public Profiles,Is Live Video,Only applicable to live video content.,Only applicable to live video content.,N
+Facebook,Public Profiles,Is Crossposted,Only shown for crossposted videos.,Only shown for crossposted videos.,N
+Facebook,Public Profiles,Thumbnail URL,Shown for videos and links.,Shown for videos and links.,Y
+Facebook,Public Profiles,Caption,Applies to video content; shown in UI and API.,Applies to video content; shown in UI and API.,Y
+Facebook,Public Profiles,Hashtags,Parsed from post text if present.,Parsed from post text if present.,Y
+Facebook,Public Profiles,Mentions,Shown when post includes mentions.,Shown when post includes mentions.,Y
+Facebook,Public Profiles,Page Verification Status,Only for Pages; shown in UI.,Only for Pages; shown in UI.,N
+Facebook,Public Profiles,Post Status,Not visible in UI; available via API for partners.,Not visible in UI; available via API for partners.,N
+Facebook,Public Groups,Post ID,Always available via API and UI.,Always available via API and UI.,Y
+Facebook,Public Groups,Page/Profile/Group ID,Always available via API and UI.,Always available via API and UI.,Y
+Facebook,Public Groups,Permalink/Canonical URL,Available via UI and API when post is public.,Available via UI and API when post is public.,Y
+Facebook,Public Groups,Media Type,Available when post includes media.,Available when post includes media.,Y
+Facebook,Public Groups,Post Type,"Visible when post is categorized (e.g., shared link, status).","Visible when post is categorized (e.g., shared link, status).",Y
+Facebook,Public Groups,Branded Content Sponsor,Available only if post is branded content.,Available only if post is branded content.,N
+Facebook,Public Groups,Timestamp (Exact),Included in API and visible in UI.,Included in API and visible in UI.,Y
+Facebook,Public Groups,Edit History / Last Updated Time,May be visible in UI; limited API access.,May be visible in UI; limited API access.,N
+Facebook,Public Groups,Engagement Breakdown,Available only via API for reactions breakdown.,Available only via API for reactions breakdown.,Y
+Facebook,Public Groups,Platform Source,"Shown for some posts (e.g., mobile/web).","Shown for some posts (e.g., mobile/web).",Y
+Facebook,Public Groups,Video Duration,Only available for video posts.,Only available for video posts.,Y
+Facebook,Public Groups,Is Live Video,Only applicable to live video content.,Only applicable to live video content.,N
+Facebook,Public Groups,Is Crossposted,Only shown for crossposted videos.,Only shown for crossposted videos.,N
+Facebook,Public Groups,Thumbnail URL,Shown for videos and links.,Shown for videos and links.,Y
+Facebook,Public Groups,Caption,Applies to video content; shown in UI and API.,Applies to video content; shown in UI and API.,Y
+Facebook,Public Groups,Hashtags,Parsed from post text if present.,Parsed from post text if present.,Y
+Facebook,Public Groups,Mentions,Shown when post includes mentions.,Shown when post includes mentions.,Y
+Facebook,Public Groups,Page Verification Status,Only for Pages; shown in UI.,Only for Pages; shown in UI.,N
+Facebook,Public Groups,Post Status,Not visible in UI; available via API for partners.,Not visible in UI; available via API for partners.,N
+Instagram,Business/Creator Account,Post ID,Always available via API and UI.,Always available via API and UI.,Y
+Instagram,Business/Creator Account,Page/Profile/Group ID,Always available via API and UI.,Always available via API and UI.,Y
+Instagram,Business/Creator Account,Permalink/Canonical URL,Available via UI and API when post is public.,Available via UI and API when post is public.,Y
+Instagram,Business/Creator Account,Media Type,Available when post includes media.,Available when post includes media.,Y
+Instagram,Business/Creator Account,Post Type,"Visible when post is categorized (e.g., shared link, status).","Visible when post is categorized (e.g., shared link, status).",Y
+Instagram,Business/Creator Account,Branded Content Sponsor,Available only if post is branded content.,Available only if post is branded content.,N
+Instagram,Business/Creator Account,Timestamp (Exact),Included in API and visible in UI.,Included in API and visible in UI.,Y
+Instagram,Business/Creator Account,Edit History / Last Updated Time,May be visible in UI; limited API access.,May be visible in UI; limited API access.,N
+Instagram,Business/Creator Account,Engagement Breakdown,Available only via API for reactions breakdown.,Available only via API for reactions breakdown.,Y
+Instagram,Business/Creator Account,Platform Source,"Shown for some posts (e.g., mobile/web).","Shown for some posts (e.g., mobile/web).",Y
+Instagram,Business/Creator Account,Video Duration,Only available for video posts.,Only available for video posts.,Y
+Instagram,Business/Creator Account,Is Live Video,Only applicable to live video content.,Only applicable to live video content.,N
+Instagram,Business/Creator Account,Is Crossposted,Only shown for crossposted videos.,Only shown for crossposted videos.,N
+Instagram,Business/Creator Account,Thumbnail URL,Shown for videos and links.,Shown for videos and links.,Y
+Instagram,Business/Creator Account,Caption,Applies to video content; shown in UI and API.,Applies to video content; shown in UI and API.,Y
+Instagram,Business/Creator Account,Hashtags,Parsed from post text if present.,Parsed from post text if present.,Y
+Instagram,Business/Creator Account,Mentions,Shown when post includes mentions.,Shown when post includes mentions.,Y
+Instagram,Business/Creator Account,Page Verification Status,Only for Pages; shown in UI.,Only for Pages; shown in UI.,N
+Instagram,Business/Creator Account,Post Status,Not visible in UI; available via API for partners.,Not visible in UI; available via API for partners.,N
+Instagram,Public Accounts,Post ID,Always available via API and UI.,Always available via API and UI.,Y
+Instagram,Public Accounts,Page/Profile/Group ID,Always available via API and UI.,Always available via API and UI.,Y
+Instagram,Public Accounts,Permalink/Canonical URL,Available via UI and API when post is public.,Available via UI and API when post is public.,Y
+Instagram,Public Accounts,Media Type,Available when post includes media.,Available when post includes media.,Y
+Instagram,Public Accounts,Post Type,"Visible when post is categorized (e.g., shared link, status).","Visible when post is categorized (e.g., shared link, status).",Y
+Instagram,Public Accounts,Branded Content Sponsor,Available only if post is branded content.,Available only if post is branded content.,N
+Instagram,Public Accounts,Timestamp (Exact),Included in API and visible in UI.,Included in API and visible in UI.,Y
+Instagram,Public Accounts,Edit History / Last Updated Time,May be visible in UI; limited API access.,May be visible in UI; limited API access.,N
+Instagram,Public Accounts,Engagement Breakdown,Available only via API for reactions breakdown.,Available only via API for reactions breakdown.,Y
+Instagram,Public Accounts,Platform Source,"Shown for some posts (e.g., mobile/web).","Shown for some posts (e.g., mobile/web).",Y
+Instagram,Public Accounts,Video Duration,Only available for video posts.,Only available for video posts.,Y
+Instagram,Public Accounts,Is Live Video,Only applicable to live video content.,Only applicable to live video content.,N
+Instagram,Public Accounts,Is Crossposted,Only shown for crossposted videos.,Only shown for crossposted videos.,N
+Instagram,Public Accounts,Thumbnail URL,Shown for videos and links.,Shown for videos and links.,Y
+Instagram,Public Accounts,Caption,Applies to video content; shown in UI and API.,Applies to video content; shown in UI and API.,Y
+Instagram,Public Accounts,Hashtags,Parsed from post text if present.,Parsed from post text if present.,Y
+Instagram,Public Accounts,Mentions,Shown when post includes mentions.,Shown when post includes mentions.,Y
+Instagram,Public Accounts,Page Verification Status,Only for Pages; shown in UI.,Only for Pages; shown in UI.,N
+Instagram,Public Accounts,Post Status,Not visible in UI; available via API for partners.,Not visible in UI; available via API for partners.,N
