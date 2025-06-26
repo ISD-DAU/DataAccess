@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # URL to your raw Excel file on GitHub
-GITHUB_XLSX_URL = "https://github.com/ISD-DAU/DataAccess/blob/main/FB%20and%20instagram.xlsx"
+GITHUB_XLSX_URL = "https://raw.githubusercontent.com/ISD-DAU/DataAccess/main/FB%20and%20instagram.xlsx"
 
 st.title("Social Media Data Access Explorer")
 
