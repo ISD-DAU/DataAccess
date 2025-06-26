@@ -9,6 +9,14 @@ def load_data(url):
 GITHUB_CSV_URL = "https://raw.githubusercontent.com/ISD-DAU/DataAccess/main/FB%20and%20instagram.csv"
 df = load_data(GITHUB_CSV_URL)
 
+def format_access(value):
+    if value == "Y":
+        return "✅"
+    elif value == "N":
+        return "❌"
+    else:
+        return value
+
 st.title("Social Media Data Access Explorer")
 
 # Step 1: Start with full data
@@ -57,9 +65,19 @@ brandwatch_filter = st.multiselect("Brandwatch", options=brandwatches)
 if brandwatch_filter:
     filtered_df = filtered_df[filtered_df["Brandwatch"].isin(brandwatch_filter)]
 
+# Replace Y/N with icons in specific columns
+columns_to_format = ["MCL UI", "MCL API", "Brandwatch"]
+
+for col in columns_to_format:
+    if col in filtered_df.columns:
+        filtered_df[col] = filtered_df[col].apply(format_access)
+
 # Final results
+#st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
+#st.dataframe(filtered_df)
+
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
-st.dataframe(filtered_df)
+st.table(filtered_df)  # Looks cleaner, but not scrollable
 
 csv = filtered_df.to_csv(index=False)
 st.download_button("Download Filtered Data as CSV", csv, "filtered_data.csv", "text/csv")
