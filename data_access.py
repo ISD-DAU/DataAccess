@@ -2,17 +2,17 @@ import streamlit as st
 import pandas as pd
 
 # URL to your raw Excel file on GitHub
-GITHUB_XLSX_URL = "https://github.com/ISD-DAU/DataAccess/raw/refs/heads/main/FB%20and%20instagram.xlsx"
+GITHUB_CSV_URL = "https://raw.githubusercontent.com/ISD-DAU/DataAccess/refs/heads/main/FB%20and%20instagram.csv"
 
 st.title("Social Media Data Access Explorer")
 
 # Load Excel file from GitHub
 @st.cache_data
 def load_data(url):
-    df = pd.read_excel(url)
+    df = pd.read_csv(url)
     return df
 
-df = load_data(GITHUB_XLSX_URL)
+df = load_data(GITHUB_CSV_URL)
 
 st.subheader("Filter Options")
 
