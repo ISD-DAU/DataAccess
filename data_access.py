@@ -74,7 +74,11 @@ for col in columns_to_format:
 
 # Final results
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
-st.dataframe(filtered_df)
+st.dataframe(
+    filtered_df,
+    use_container_width=True,  # Use full page width
+    height=600  # You can adjust this number to control table height
+)
 
 csv = filtered_df.to_csv(index=False)
 st.download_button("Download Filtered Data as CSV", csv, "filtered_data.csv", "text/csv")
