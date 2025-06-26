@@ -74,11 +74,19 @@ for col in columns_to_format:
 
 # Final results
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
-st.dataframe(
-    filtered_df,
-    width=1500,  # Use full page width
-    height=600  # You can adjust this number to control table height
-)
+
+# Optional CSS tweaks
+st.markdown("""
+    <style>
+    .stDataFrame td {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# Show the larger table with full width
+st.dataframe(filtered_df, use_container_width=True, height=700)
 
 csv = filtered_df.to_csv(index=False)
 st.download_button("Download Filtered Data as CSV", csv, "filtered_data.csv", "text/csv")
