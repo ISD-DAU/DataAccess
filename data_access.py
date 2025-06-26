@@ -16,34 +16,34 @@ df = load_data(GITHUB_CSV_URL)
 
 st.subheader("Filter Options")
 
-# Create dropdown filters
-platform_filter = st.selectbox("Platform", options=["All"] + sorted(df["Platform"].dropna().unique().tolist()))
-space_filter = st.selectbox("Space", options=["All"] + sorted(df["Space"].dropna().unique().tolist()))
-datapoint_filter = st.selectbox("Data Point", options=["All"] + sorted(df["Data Point"].dropna().unique().tolist()))
-mcl_ui_filter = st.selectbox("MCL UI", options=["All"] + sorted(df["MCL UI"].dropna().unique().tolist()))
-mcl_api_filter = st.selectbox("MCL API", options=["All"] + sorted(df["MCL API"].dropna().unique().tolist()))
-brandwatch_filter = st.selectbox("Brandwatch", options=["All"] + sorted(df["Brandwatch"].dropna().unique().tolist()))
+# Multiselect filters
+platform_filter = st.multiselect("Platform", options=sorted(df["Platform"].dropna().unique()), default=[])
+space_filter = st.multiselect("Space", options=sorted(df["Space"].dropna().unique()), default=[])
+datapoint_filter = st.multiselect("Data Point", options=sorted(df["Data Point"].dropna().unique()), default=[])
+mcl_ui_filter = st.multiselect("MCL UI", options=sorted(df["MCL UI"].dropna().unique()), default=[])
+mcl_api_filter = st.multiselect("MCL API", options=sorted(df["MCL API"].dropna().unique()), default=[])
+brandwatch_filter = st.multiselect("Brandwatch", options=sorted(df["Brandwatch"].dropna().unique()), default=[])
 
 # Apply filters
 filtered_df = df.copy()
 
-if platform_filter != "All":
-    filtered_df = filtered_df[filtered_df["Platform"] == platform_filter]
+if platform_filter:
+    filtered_df = filtered_df[filtered_df["Platform"].isin(platform_filter)]
 
-if space_filter != "All":
-    filtered_df = filtered_df[filtered_df["Space"] == space_filter]
+if space_filter:
+    filtered_df = filtered_df[filtered_df["Space"].isin(space_filter)]
 
-if datapoint_filter != "All":
-    filtered_df = filtered_df[filtered_df["Data Point"] == datapoint_filter]
+if datapoint_filter:
+    filtered_df = filtered_df[filtered_df["Data Point"].isin(datapoint_filter)]
 
-if mcl_ui_filter != "All":
-    filtered_df = filtered_df[filtered_df["MCL UI"] == mcl_ui_filter]
+if mcl_ui_filter:
+    filtered_df = filtered_df[filtered_df["MCL UI"].isin(mcl_ui_filter)]
 
-if mcl_api_filter != "All":
-    filtered_df = filtered_df[filtered_df["MCL API"] == mcl_api_filter]
+if mcl_api_filter:
+    filtered_df = filtered_df[filtered_df["MCL API"].isin(mcl_api_filter)]
 
-if brandwatch_filter != "All":
-    filtered_df = filtered_df[filtered_df["Brandwatch"] == brandwatch_filter]
+if brandwatch_filter:
+    filtered_df = filtered_df[filtered_df["Brandwatch"].isin(brandwatch_filter)]
 
 # Display results
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
