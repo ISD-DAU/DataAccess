@@ -10,69 +10,56 @@ GITHUB_CSV_URL = "https://raw.githubusercontent.com/ISD-DAU/DataAccess/main/FB%2
 df = load_data(GITHUB_CSV_URL)
 
 def format_access(value):
-    if value == "Y":
-        return "✅"
-    elif value == "N":
-        return "❌"
-    else:
-        return value
+    return "✅" if value == "Y" else "❌" if value == "N" else value
 
 st.title("Social Media Data Access Explorer")
 
-# Step 1: Start with full data
+# Start with full data
 filtered_df = df.copy()
 
-# Step 2: Get current options based on filtered_df
-platforms = sorted(filtered_df["Platform"].dropna().unique())
-platform_filter = st.multiselect("Platform", options=platforms)
-
-# Apply filter (OR logic)
+# Platform filter
+platform_options = sorted(filtered_df["Platform"].dropna().unique())
+platform_filter = st.multiselect("Platform", platform_options)
 if platform_filter:
     filtered_df = filtered_df[filtered_df["Platform"].isin(platform_filter)]
 
-# Now get possible "Space" options *after* platform filtering
-spaces = sorted(filtered_df["Space"].dropna().unique())
-space_filter = st.multiselect("Space", options=spaces)
-
+# Space filter
+space_options = sorted(filtered_df["Space"].dropna().unique())
+space_filter = st.multiselect("Space", space_options)
 if space_filter:
     filtered_df = filtered_df[filtered_df["Space"].isin(space_filter)]
 
-# Same for Data Point
-datapoints = sorted(filtered_df["Data Point"].dropna().unique())
-datapoint_filter = st.multiselect("Data Point", options=datapoints)
-
+# Data Point filter
+datapoint_options = sorted(filtered_df["Data Point"].dropna().unique())
+datapoint_filter = st.multiselect("Data Point", datapoint_options)
 if datapoint_filter:
     filtered_df = filtered_df[filtered_df["Data Point"].isin(datapoint_filter)]
 
-# MCL UI
-mcl_uis = sorted(filtered_df["MCL UI"].dropna().unique())
-mcl_ui_filter = st.multiselect("MCL UI", options=mcl_uis)
-
+# MCL UI filter
+mcl_ui_options = sorted(filtered_df["MCL UI"].dropna().unique())
+mcl_ui_filter = st.multiselect("MCL UI", mcl_ui_options)
 if mcl_ui_filter:
     filtered_df = filtered_df[filtered_df["MCL UI"].isin(mcl_ui_filter)]
 
-# MCL API
-mcl_apis = sorted(filtered_df["MCL API"].dropna().unique())
-mcl_api_filter = st.multiselect("MCL API", options=mcl_apis)
-
+# MCL API filter
+mcl_api_options = sorted(filtered_df["MCL API"].dropna().unique())
+mcl_api_filter = st.multiselect("MCL API", mcl_api_options)
 if mcl_api_filter:
     filtered_df = filtered_df[filtered_df["MCL API"].isin(mcl_api_filter)]
 
-# Brandwatch
-brandwatches = sorted(filtered_df["Brandwatch"].dropna().unique())
-brandwatch_filter = st.multiselect("Brandwatch", options=brandwatches)
-
+# Brandwatch filter
+brandwatch_options = sorted(filtered_df["Brandwatch"].dropna().unique())
+brandwatch_filter = st.multiselect("Brandwatch", brandwatch_options)
 if brandwatch_filter:
     filtered_df = filtered_df[filtered_df["Brandwatch"].isin(brandwatch_filter)]
 
-# Replace Y/N with icons in specific columns
+# Format Y/N columns
 columns_to_format = ["MCL UI", "MCL API", "Brandwatch"]
-
 for col in columns_to_format:
     if col in filtered_df.columns:
         filtered_df[col] = filtered_df[col].apply(format_access)
 
-# Final results
+# Results
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
 
 # Optional CSS tweaks
@@ -85,8 +72,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Show the larger table with full width
 st.dataframe(filtered_df, use_container_width=True, height=700)
 
+# Download button
 csv = filtered_df.to_csv(index=False)
 st.download_button("Download Filtered Data as CSV", csv, "filtered_data.csv", "text/csv")
