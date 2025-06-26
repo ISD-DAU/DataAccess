@@ -73,11 +73,8 @@ for col in columns_to_format:
         filtered_df[col] = filtered_df[col].apply(format_access)
 
 # Final results
-#st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
-#st.dataframe(filtered_df)
-
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
-st.table(filtered_df)  # Looks cleaner, but not scrollable
+st.dataframe(filtered_df)
 
 csv = filtered_df.to_csv(index=False)
 st.download_button("Download Filtered Data as CSV", csv, "filtered_data.csv", "text/csv")
