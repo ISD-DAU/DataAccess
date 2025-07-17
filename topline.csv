@@ -1,9 +1,7 @@
 ﻿Platforms,Facebook,Instagram,LinkedIn,TikTok,X,YouTube,BlueSky,Discord,Telegram,Threads
-Does the platform provide an API?,Y,Y,Y,Y,Y,Y,Y,Y,Y,N
-Does the platform offer a no-coding interface?,Y,Y,N,N,N,N,N,N,N,Y
-Is permission granted for data scrapping for the purpose of research?,N,N,N,N,N,Y,N,N,N,N
-Can researchers access data without a vetting process?,N,N,N,N,N,N,Y,Y,Y,N
-Does the platform provide data from all countries and geographies?,N,N,Y,N,Y,Y,Y,Y,Y,N
-Is data accessible without location restrictions for eligible researchers?,Y*,Y*,Y,N,Y,Y,Y,Y,Y,Y*
-Applications? ,,,,,,,,,,
-Violations of ToS?,,,,,,,,,,
+API,Y,Y,Y,Y,Y,Y,Y,Y,Y,N
+No Coding Interface,Y,Y,N,N,N,N,N,N,N,Y
+Permission to Scrape For Research,N,N,N,N,N,Y,N,N,N,N
+Access to Data Without Vetting,N,N,N,N,N,N,Y,Y,Y,N
+Data From All Countries,N,N,Y,N,Y,Y,Y,Y,Y,N
+Data Accessible without Location Restrictions for Researchers,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
