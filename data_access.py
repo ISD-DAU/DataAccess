@@ -42,7 +42,8 @@ if page == "Detailed Metadata":
 
 else:
     st.header("📊 Topline Summary")
-    df = load_data(TOPLINE_URL).set_index(df.columns[0])
+    df = load_data(TOPLINE_URL)
+    df = df.set_index(df.columns[0])
 
     # Replace Y/N with icons (✅ / ❌) across the whole table
     df = df.applymap(lambda val: "✅" if val == "Y" else "❌" if val == "N" else val)
