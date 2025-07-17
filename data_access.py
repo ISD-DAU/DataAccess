@@ -42,31 +42,23 @@ if page == "Detailed Metadata":
 
 else:
     st.header("📊 Topline Summary")
-    raw_df = load_data(TOPLINE_URL)
+    df = load_data(TOPLINE_URL).set_index(df.columns[0])
 
-    # Melt the wide-format Topline data into long format
-    df = pd.melt(
-        raw_df,
-        id_vars=[raw_df.columns[0]],
-        var_name="Platform",
-        value_name="Access"
-    ).rename(columns={raw_df.columns[0]: "Access Type"})
+    # Replace Y/N with icons (✅ / ❌) across the whole table
+    df = df.applymap(lambda val: "✅" if val == "Y" else "❌" if val == "N" else val)
 
-    # Format Y/N
-    df["Access"] = df["Access"].apply(format_access)
+    # Filters
+    access_types = df.index.tolist()
+    access_filter = st.multiselect("Access Types", access_types, default=access_types)
 
-    # Filters for Topline
-    filtered_df = df.copy()
+    platform_options = df.columns.tolist()
+    platform_filter = st.multiselect("Platforms", platform_options, default=platform_options)
 
-    access_options = sorted(filtered_df["Access Type"].dropna().unique())
-    access_filter = st.multiselect("Access Type", access_options)
-    if access_filter:
-        filtered_df = filtered_df[filtered_df["Access Type"].isin(access_filter)]
+    # Apply filters
+    filtered_df = df.loc[access_filter, platform_filter]
 
-    platform_options = sorted(filtered_df["Platform"].dropna().unique())
-    platform_filter = st.multiselect("Platform", platform_options)
-    if platform_filter:
-        filtered_df = filtered_df[filtered_df["Platform"].isin(platform_filter)]
+    # Reset index to make access type a visible column
+    filtered_df = filtered_df.reset_index()
 
 # Show results
 st.subheader(f"Filtered Results ({len(filtered_df)} rows)")
